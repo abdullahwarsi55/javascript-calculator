@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<title>calcjs</title>
+<head></head>
+<body style="background-image: radial-gradient(red,blue, green);">
+    
+    <form  method="post" style="text-align: center; padding: 10 10 10 10;"  >
+    <style>
+        
+      p{
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       font-size: xx-large;
+       font-style: italic;
+       color: rgb(160, 204, 243);
+       text-shadow: 2px 2px 5px red;
+       
+       
+      }
+      
+      input.a{
+    width: 400px;
+    height: 40px;
+    background-color: rgb(160, 204, 243);
+    border-radius: 10px;
+    padding-top: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+      padding-left: 30px;
+      font-size: x-large;
+      text-shadow: 2px 2px 5px red;
+      font-style: italic;
+      box-shadow: 2px 2px rgb(0, 0, 0);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      input.b{
+        border-radius: 10px;
+        box-shadow: 2px 2px rgb(0, 0, 0);
+        width: 50px;
+    height:50px;
+    background-color: rgb(160, 204, 243);
+      }
+      input.b:hover{
+        font-size: 20px;
+         color: white;
+         background-color: black;
+      }
+     
+      </style>
+     
+      <img src="calculator-svgrepo-com.svg" style="margin: 10 10 10 10;" alt="hello" width="150" height="120">
+    
+      <p><strong>CALCULATOR</strong></p>
+      
+         <input class="a"type="text" id="result"><br><br> 
+          <input class="b" type="button" onclick="disp('1')"  value="1">
+          <input  class="b"type="button" onclick="disp('2')"  value="2">
+          <input  class="b"type="button" onclick="disp('3')"  value="3">
+          <input  class="b"type="button" onclick="disp('4')"  value="4"><br><br>
+          <input  class="b"type="button" onclick="disp('5')"  value="5">
+          <input  class="b"type="button" onclick="disp('6')"  value="6">
+          <input  class="b"type="button" onclick="disp('7')"  value="7">
+          <input  class="b"type="button" onclick="disp('8')"  value="8"><br><br>
+          <input  class="b"type="button" onclick="disp('9')"  value="9">
+          <input class="b" type="button" onclick="disp('0')"  value="0">
+          <input  class="b" type="button" onclick="disp('+')"  value="+">
+          <input class="b" type="button" onclick="disp('-')"  value="-"><br><br>
+          <input class="b" type="button" onclick="disp('/')"  value="/">
+          <input class="b" type="button" onclick="disp('*')"  value="*">
+          <input  class="b"type="button"  id="btn" onclick="clr()"  value="AC"> 
+          <input  class="b" type="button"  onclick="calculate()" value="CAL">
+          <script>
+             function disp(value) 
+        { 
+            document.getElementById("result").value += value; 
+        }
+        function clr()
+        {
+            document.getElementById("result").value="";
+        }
+    function calculate()
+     {
+    var x = document.getElementById("result").value;
+    var y = eval(x);
+    document.getElementById("result").value = y;
+    }
+
+          </script>
+      </form>
+    </body>
